@@ -65,6 +65,12 @@ public struct VectorPoderoso
         Vector3 temporal = new Vector3(X+x, Y+y);
         Debug.DrawLine(inicio, temporal, color);
     }
+
+    public VectorPoderoso Lerpear(VectorPoderoso vec1, VectorPoderoso vec2, float t)
+    {
+        var resultado = vec2.Suma((vec1.Multiplicar(t)));
+        return resultado;
+    }
 }
 
 
