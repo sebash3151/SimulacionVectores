@@ -66,10 +66,14 @@ public struct VectorPoderoso
         Debug.DrawLine(inicio, temporal, color);
     }
 
-    public VectorPoderoso Lerpear(VectorPoderoso vec1, VectorPoderoso vec2, float t)
+    public static VectorPoderoso Lerpear(VectorPoderoso vec1, VectorPoderoso vec2, float t)
     {
-        var resultado = vec2.Suma((vec1.Multiplicar(t)));
-        return resultado;
+        var copia = new VectorPoderoso(vec2.X, vec2.Y);
+        copia.Resta(vec1);
+        var mitad = new VectorPoderoso(copia.X, copia.Y);
+        mitad.Multiplicar(t);
+        mitad.Suma(vec1);
+        return mitad;
     }
 }
 

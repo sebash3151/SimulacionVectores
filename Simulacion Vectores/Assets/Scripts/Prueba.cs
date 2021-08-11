@@ -11,21 +11,11 @@ public class Prueba : MonoBehaviour
 
     private void Update()
     {
-        VectorPoderoso vectorcopia = new VectorPoderoso(Vector2.X, Vector2.Y);
         Vector1.DibujarVector(color);
         Vector2.DibujarVector(color2);
 
-        vectorcopia.Resta(Vector1);
-        vectorcopia.DibujarVector(color3);
-        vectorcopia.DibujarVectorDiferente(Vector1.X, Vector1.Y, color3);
-
-        VectorPoderoso vectormitad = new VectorPoderoso(vectorcopia.X, vectorcopia.Y);
-        vectormitad.Lerpear(vectormitad, Vector1, multi);
-        vectormitad.DibujarVector(color4);
-
-        /*vectormitad.Multiplicar(multi);
-        vectormitad.Suma(Vector1);
-        vectormitad.DibujarVector(color4);
-        */
+        var mitad = VectorPoderoso.Lerpear(Vector1, Vector2, multi);
+        mitad.DibujarVector(color3);
+      
     }
 }
