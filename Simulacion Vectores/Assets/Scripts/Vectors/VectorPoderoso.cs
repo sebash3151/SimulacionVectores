@@ -37,13 +37,17 @@ public struct VectorPoderoso
 
     public float CalcularMagnitud()
     {
-        float magnitudresultante = Mathf.Sqrt(Mathf.Pow(X, 2) + Mathf.Pow(Y, 2));
+        float magnitudresultante = Mathf.Sqrt(Mathf.Pow(X, 2) + Mathf.Pow(Y, 2));        
         return magnitudresultante;
     }
 
     public VectorPoderoso Normalizar()
     {
         float MagnitudHallada = CalcularMagnitud();
+        if (MagnitudHallada == 0)
+        {
+            return new VectorPoderoso(0, 0);
+        }
         float magX = X / MagnitudHallada;
         float magY = Y / MagnitudHallada;
         return new VectorPoderoso(magX, magY);
