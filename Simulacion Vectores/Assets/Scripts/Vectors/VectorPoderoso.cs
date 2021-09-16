@@ -35,6 +35,14 @@ public struct VectorPoderoso
         return new VectorPoderoso(X, Y);
     }
 
+    //public static VectorPoderoso operator * (VectorPoderoso vectoraMultiplciar, float ValoraMultiplicar)
+    //{
+    //    VectorPoderoso resultado = new VectorPoderoso(vectoraMultiplciar.X, vectoraMultiplciar.Y);
+    //    resultado.X = resultado.X * ValoraMultiplicar;
+    //    resultado.Y = resultado.X * ValoraMultiplicar;
+    //    return new VectorPoderoso(resultado.X, resultado.Y);
+    //}
+
     public float CalcularMagnitud()
     {
         float magnitudresultante = Mathf.Sqrt(Mathf.Pow(X, 2) + Mathf.Pow(Y, 2));        
