@@ -4,23 +4,39 @@ using UnityEngine;
 
 public class ForceWalker : MonoBehaviour
 {
-    public VectorPoderoso thisPosition, velocidad;
-    [SerializeField] Color colorpos, colorvelo, coloracele;
-    [SerializeField] float xmax = 5f, xmin = -5, ymax = 5, ymin = -5, rapidezlimite = 5f;
-    VectorPoderoso velocidadaplicada, fuerzaactual, gravedadactual, fuerzaAcumuladaActual;
-    [SerializeField] float velocidadPerdida = 0f;
+    //posicion y velocidad
+    private VectorPoderoso thisPosition, velocidad;
 
+    //colores
+    [SerializeField] Color colorpos, colorvelo, coloracele;
+
+    //colisiones con el limite del mundo
+    [SerializeField] float xmax = 5f, xmin = -5, ymax = 5, ymin = -5, rapidezlimite = 5f;
     [SerializeField] bool boxlimits = true;
 
+    //valores temporales por que aja ... mutable
+    VectorPoderoso velocidadaplicada, fuerzaactual, gravedadactual, fuerzaAcumuladaActual;
+
     //fuerzas
-    [SerializeField] VectorPoderoso fuerzaX = new VectorPoderoso(0, 0);
-    [SerializeField] VectorPoderoso fuerzaY = new VectorPoderoso(0, 0);
-    [SerializeField] [Range(0, 1)] float coeficienteFriccion = 1f;
+    [SerializeField] VectorPoderoso fuerza1 = new VectorPoderoso(0, 0);
+    [SerializeField] VectorPoderoso fuerza2 = new VectorPoderoso(0, 0);
+    [SerializeField] VectorPoderoso gravedad = new VectorPoderoso(0, -9.8f);
+
+    [SerializeField] [Range(0, 1)] float coeficienteFriccionTierra = 1f;
+
+    //masa del cuerpo 
     [SerializeField] float N = 20f;
     [SerializeField] float masa = 1f;
-    VectorPoderoso gravedad = new VectorPoderoso(0, -9.8f);
+    private VectorPoderoso peso;
+
+    //total de las fuerzas
     [SerializeField] VectorPoderoso fuerzaAcumulada = new VectorPoderoso(0, 0);
-    [SerializeField] VectorPoderoso peso;
+
+    //fluidos
+    [SerializeField] float rho = 0f;
+    [SerializeField] bool fluidoEnter = false;
+    [SerializeField] float areaContacto = 0f;
+    [SerializeField] [Range(0, 1)] float coeficienteFriccionFluido = 1f;
 
     private void Start()
     {
@@ -31,9 +47,9 @@ public class ForceWalker : MonoBehaviour
     void Update()
     {
         UpdatePosition();
-        thisPosition.DibujarVector(colorpos);
-        velocidad.DibujarVectorDiferente(thisPosition.X, thisPosition.Y, colorvelo);        
+        DrawVector();     
         transform.position = new Vector3(thisPosition.X, thisPosition.Y);
+        ChekeoLimites();
     }
 
     public void UpdatePosition()
@@ -46,12 +62,17 @@ public class ForceWalker : MonoBehaviour
         fuerzaAcumulada.Y = 0;
 
         //Calcular Friccion
-        AplicarFriccion();
+        SumarFuerzas(AplicarFriccion());
 
-        ApplyForce(fuerzaX);
-        ApplyForce(fuerzaY);
+        //fuerza de fluidos
+        FluidoEntrada();
+
+        //Aplicacion de fuerzas
+        ApplyForce(fuerza1);
+        ApplyForce(fuerza2);
         ApplyGravity();
 
+        //copia del acumulado 
         fuerzaAcumuladaActual = new VectorPoderoso(fuerzaAcumulada.X, fuerzaAcumulada.Y);
 
         //sumar la aceleracion a la velocidad
@@ -70,19 +91,41 @@ public class ForceWalker : MonoBehaviour
 
         //se le suma la veclocidad a la posicion
         thisPosition.Suma(velocidadaplicada.Multiplicar(Time.deltaTime));
+    }
 
-        //limites de la caja
-        if (boxlimits)
+    private void FluidoEntrada()
+    {
+        if (fluidoEnter)
         {
-            BoxLimitsCollision();
+            VectorPoderoso fuerzaFluido = new VectorPoderoso(0f, 0f);
+            VectorPoderoso velocidadNormalizada = velocidad.Normalizar();
+            float cuadradoV = Mathf.Pow(velocidad.CalcularMagnitud(), 2);
+            fuerzaFluido = velocidadNormalizada.Multiplicar((-1f / 2f) * rho * cuadradoV * coeficienteFriccionFluido * areaContacto); 
+            SumarFuerzas(fuerzaFluido);
         }
     }
 
-    private void AplicarFriccion()
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Fluido"))
+        {
+            fluidoEnter = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Fluido"))
+        {
+            fluidoEnter = false;
+        }
+    }
+
+    private VectorPoderoso AplicarFriccion()
     {
         VectorPoderoso friccion = velocidad.Normalizar();
-        friccion.Multiplicar(-coeficienteFriccion * N);       
-        SumarFuerzas(friccion);
+        friccion.Multiplicar(-coeficienteFriccionTierra * N);       
+        return friccion;
     }
 
     private void ApplyForce(VectorPoderoso fuerzaAplicar)
@@ -105,9 +148,19 @@ public class ForceWalker : MonoBehaviour
         fuerzaExtra.DibujarVectorDiferente(thisPosition.X, thisPosition.Y, coloracele);
     }
 
-    private void PerderVelocidad()
+    private void DrawVector()
     {
-        //velocidad.Multiplicar(velocidadPerdida);
+        thisPosition.DibujarVector(colorpos);
+        velocidad.DibujarVectorDiferente(thisPosition.X, thisPosition.Y, colorvelo);
+    }
+
+    private void ChekeoLimites()
+    {
+        //limites de la caja
+        if (boxlimits)
+        {
+            BoxLimitsCollision();
+        }
     }
 
     private void BoxLimitsCollision()
@@ -116,25 +169,21 @@ public class ForceWalker : MonoBehaviour
         {
             thisPosition.X = xmax;
             velocidad.X = -velocidad.X;
-            PerderVelocidad();
         }
         else if (thisPosition.X < xmin)
         {
             thisPosition.X = xmin;
             velocidad.X = -velocidad.X;
-            PerderVelocidad();
         }
         if (thisPosition.Y > ymax)
         {
             thisPosition.Y = ymax;
             velocidad.Y = -velocidad.Y;
-            PerderVelocidad();
         }
         else if (thisPosition.Y < ymin)
         {
             thisPosition.Y = ymin;
             velocidad.Y = -velocidad.Y;
-            PerderVelocidad();
         }
     }
 }
