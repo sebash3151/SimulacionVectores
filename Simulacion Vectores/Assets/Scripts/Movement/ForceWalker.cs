@@ -5,10 +5,11 @@ using UnityEngine;
 public class ForceWalker : MonoBehaviour
 {
     //posicion y velocidad
-    private VectorPoderoso thisPosition, velocidad;
+    [SerializeField] private VectorPoderoso thisPosition, velocidad;
 
     //colores
-    [SerializeField] Color colorpos, colorvelo, coloracele;
+    [Header("Colores")]
+    [SerializeField] Color colorpos, colorpos2, colorvelo, coloracele;
 
     //colisiones con el limite del mundo
     [SerializeField] float xmax = 5f, xmin = -5, ymax = 5, ymin = -5, rapidezlimite = 5f;
@@ -27,6 +28,7 @@ public class ForceWalker : MonoBehaviour
     //masa del cuerpo 
     [SerializeField] float N = 20f;
     [SerializeField] float masa = 1f;
+    [SerializeField] bool pesoBool = true;
     private VectorPoderoso peso;
 
     //total de las fuerzas
@@ -37,6 +39,14 @@ public class ForceWalker : MonoBehaviour
     [SerializeField] bool fluidoEnter = false;
     [SerializeField] float areaContacto = 0f;
     [SerializeField] [Range(0, 1)] float coeficienteFriccionFluido = 1f;
+
+    //Friccion
+    [SerializeField] bool BoolFriccion = true;
+
+    //Gravedad
+    [SerializeField] ForceWalker objetoGravitacional;
+    [SerializeField] float Gmagico = 1f;
+    [SerializeField] bool GravitacionActivada = true;
 
     private void Start()
     {
@@ -62,7 +72,10 @@ public class ForceWalker : MonoBehaviour
         fuerzaAcumulada.Y = 0;
 
         //Calcular Friccion
-        SumarFuerzas(AplicarFriccion());
+        if (BoolFriccion)
+        {
+            SumarFuerzas(AplicarFriccion());
+        }
 
         //fuerza de fluidos
         FluidoEntrada();
@@ -70,7 +83,16 @@ public class ForceWalker : MonoBehaviour
         //Aplicacion de fuerzas
         ApplyForce(fuerza1);
         ApplyForce(fuerza2);
-        ApplyGravity();
+
+        if (pesoBool)
+        {
+            ApplyGravity();
+        }
+
+        if (GravitacionActivada)
+        {
+            FuerzaGravitacional(objetoGravitacional);
+        }
 
         //copia del acumulado 
         fuerzaAcumuladaActual = new VectorPoderoso(fuerzaAcumulada.X, fuerzaAcumulada.Y);
@@ -91,6 +113,21 @@ public class ForceWalker : MonoBehaviour
 
         //se le suma la veclocidad a la posicion
         thisPosition.Suma(velocidadaplicada.Multiplicar(Time.deltaTime));
+    }
+
+    private void FuerzaGravitacional(ForceWalker gravitacion)
+    {
+        gravitacion = gravitacion.GetComponent<ForceWalker>();
+
+        float m2 = gravitacion.masa;
+        VectorPoderoso V1 = new VectorPoderoso(thisPosition.X, thisPosition.Y);
+        VectorPoderoso V2 = new VectorPoderoso(gravitacion.thisPosition.X, gravitacion.thisPosition.Y);
+        VectorPoderoso diferencia = V2.Resta(V1);
+        float distanciaSeparacion = diferencia.CalcularMagnitud();
+        VectorPoderoso direccion = diferencia.Normalizar();
+        VectorPoderoso fuerzaGravitacional = direccion.Multiplicar((Gmagico * masa * m2) / Mathf.Pow(distanciaSeparacion, 2));
+        fuerzaGravitacional.DibujarVectorDiferente(V1.X, V2.Y, colorpos2);
+        SumarFuerzas(fuerzaGravitacional);
     }
 
     private void FluidoEntrada()
