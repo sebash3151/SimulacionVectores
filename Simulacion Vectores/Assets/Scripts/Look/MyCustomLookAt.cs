@@ -77,6 +77,5 @@ public class MyCustomLookAt : MonoBehaviour
         {
             RotateZ(LookAtOMG(mousePosition - thisPosicion));
         }
-
     }
 }

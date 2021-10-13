@@ -156,9 +156,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &240910379
 MonoBehaviour:
@@ -335,9 +335,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &296273067
 MonoBehaviour:
@@ -514,9 +514,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &312246638
 MonoBehaviour:
@@ -693,9 +693,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &343552568
 MonoBehaviour:
@@ -872,9 +872,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &615614489
 MonoBehaviour:
@@ -1051,9 +1051,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &668953986
 MonoBehaviour:
@@ -1281,9 +1281,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &898499648
 MonoBehaviour:
@@ -1460,9 +1460,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &934286002
 MonoBehaviour:
@@ -1639,9 +1639,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &1024545865
 MonoBehaviour:
@@ -1818,9 +1818,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &1155153139
 MonoBehaviour:
@@ -1997,9 +1997,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &1170032441
 MonoBehaviour:
@@ -2176,9 +2176,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &1212568475
 MonoBehaviour:
@@ -2438,9 +2438,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &1635397787
 MonoBehaviour:
@@ -2617,9 +2617,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &1688303099
 MonoBehaviour:
@@ -2796,9 +2796,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &1696687675
 MonoBehaviour:
@@ -2975,9 +2975,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &1737951445
 MonoBehaviour:
@@ -3154,9 +3154,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &1791328941
 MonoBehaviour:
@@ -3333,9 +3333,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &1838081012
 MonoBehaviour:
@@ -3512,9 +3512,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &1989920894
 MonoBehaviour:
@@ -3691,9 +3691,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
 --- !u!114 &2019521181
 MonoBehaviour:
@@ -4012,7 +4012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
-  observacion: 0
+  observacion: 1
   moverseSinAcelerar: 0
-  moverseConAcelerar: 1
+  moverseConAcelerar: 0
   aceleracion: {x: 0, y: 0}
