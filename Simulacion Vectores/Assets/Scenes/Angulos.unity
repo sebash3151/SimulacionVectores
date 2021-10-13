@@ -156,6 +156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &240910379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +335,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &296273067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,181 +481,6 @@ Transform:
   m_Father: {fileID: 857853485}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &297250996
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 297251000}
-  - component: {fileID: 297250999}
-  - component: {fileID: 297250998}
-  - component: {fileID: 297250997}
-  m_Layer: 0
-  m_Name: MaBoa (21)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &297250997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297250996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76878766587068347a1ff253730b6565, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
-  speed: 5
---- !u!114 &297250998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297250996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Spline:
-    m_IsOpenEnded: 0
-    m_ControlPoints:
-    - position: {x: -1, y: -1, z: 0}
-      leftTangent: {x: 0.47351104, y: -0.15122843, z: -0}
-      rightTangent: {x: -0.42962754, y: 0.13721305, z: 0}
-      mode: 1
-      height: 1
-      bevelCutoff: 0
-      bevelSize: 0
-      spriteIndex: 0
-      corner: 1
-      m_CornerMode: 1
-    - position: {x: -1, y: 1, z: 0}
-      leftTangent: {x: -0.51617837, y: -0.18125206, z: 0}
-      rightTangent: {x: 0.94572383, y: 0.3320836, z: -0}
-      mode: 1
-      height: 1
-      bevelCutoff: 0
-      bevelSize: 0
-      spriteIndex: 0
-      corner: 1
-      m_CornerMode: 1
-    - position: {x: 2, y: 0.5, z: 0}
-      leftTangent: {x: -0.8880688, y: 0.46099928, z: -0}
-      rightTangent: {x: 1.5914199, y: -0.8261111, z: 0}
-      mode: 1
-      height: 0.1
-      bevelCutoff: 0
-      bevelSize: 0
-      spriteIndex: 0
-      corner: 1
-      m_CornerMode: 1
-    - position: {x: 2, y: -0.5, z: 0}
-      leftTangent: {x: 0.23328543, y: -0.02986008, z: 0}
-      rightTangent: {x: -0.039156493, y: 0.005011955, z: -0}
-      mode: 1
-      height: 1
-      bevelCutoff: 0
-      bevelSize: 0
-      spriteIndex: 0
-      corner: 1
-      m_CornerMode: 1
-  m_SpriteShape: {fileID: 11400000, guid: f24cddf7c09a6442abbce710a6fd7397, type: 2}
-  m_FillPixelPerUnit: 256
-  m_StretchTiling: 1
-  m_SplineDetail: 16
-  m_AdaptiveUV: 1
-  m_StretchUV: 0
-  m_WorldSpaceUV: 0
-  m_CornerAngleThreshold: 30
-  m_ColliderDetail: 16
-  m_ColliderOffset: 0.5
-  m_UpdateCollider: 1
-  m_OptimizeCollider: 1
-  m_OptimizeGeometry: 1
-  m_EnableTangents: 0
-  m_GeometryCached: 0
-  m_UTess2D: 0
---- !u!1971053207 &297250999
-SpriteShapeRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297250996}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Color: {r: 0.495283, g: 0.86669, b: 1, a: 1}
-  m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 2800000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
-  m_Sprites:
-  - {fileID: 21300000, guid: 0ae2b74b1edd14bb18dd7b65ae916a54, type: 3}
-  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
-  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
-  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
-  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
-  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
-  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
-  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
-  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
-  m_LocalAABB:
-    m_Center: {x: 0.6477692, y: 0.027469516, z: -0.00005}
-    m_Extent: {x: 2.253007, y: 1.2982285, z: 0.00005}
---- !u!4 &297251000
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297250996}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17, y: 1.1, z: -0.00002670288}
-  m_LocalScale: {x: 0.47015, y: 0.47015, z: 0.47015}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &312246636
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,6 +514,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &312246638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,6 +693,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &343552568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,6 +872,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &615614489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,6 +1051,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &668953986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1363,7 +1212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &857853485
 Transform:
   m_ObjectHideFlags: 0
@@ -1397,7 +1246,7 @@ Transform:
   - {fileID: 934286004}
   - {fileID: 1155153141}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &898499646
 GameObject:
@@ -1432,6 +1281,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &898499648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,6 +1460,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &934286002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1782,6 +1639,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &1024545865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1957,6 +1818,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &1155153139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2132,6 +1997,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &1170032441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2307,6 +2176,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &1212568475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2530,7 +2403,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1635397785
 GameObject:
@@ -2565,6 +2438,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &1635397787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2740,6 +2617,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &1688303099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2915,6 +2796,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &1696687675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3090,6 +2975,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &1737951445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3265,6 +3154,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &1791328941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3440,6 +3333,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &1838081012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3615,6 +3512,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &1989920894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3790,6 +3691,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
 --- !u!114 &2019521181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4107,3 +4012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.9622642, g: 0.5973897, b: 0.18609825, a: 1}
   speed: 5
+  observacion: 0
+  moverseSinAcelerar: 0
+  moverseConAcelerar: 1
+  aceleracion: {x: 0, y: 0}
